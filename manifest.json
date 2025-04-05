@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Overlame Complete",
+  "version": "0.9.1",
+  "description": "Full version with chat, tracker, HUD, and explorer",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": { "default_popup": "popup.html" },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }]
+}
